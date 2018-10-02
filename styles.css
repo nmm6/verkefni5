@@ -1,4 +1,3 @@
-/*almennar skilgreiningar*/
 * {
     margin: 0;
     padding: 0;
@@ -7,81 +6,92 @@
   *, *:before, *:after {
     box-sizing: inherit;
   }
-
-  /*@font-face {
-    font-family: 'Open Sans';
-    src: url(https://fonts.googleapis.com/css?family=Open+Sans);
-  }*/
   
   html {
     box-sizing: border-box;
+  
     font-family: 'Open Sans', helvetica, arial, sans-serif;
     font-size: 16px;
   }
   
+  .card__title {
+      font-size: 22px;
+      line-height: 22px;
+      word-break: break-word;
+      flex:2;
+      margin-bottom: 10px;
+  } 
+
+  p {
+      line-height: 22px;
+  }
+
   main {
     margin: 0 auto;
     max-width: 1500px;
     padding: 20px;
   }
-  .card__text {
-      font-size: 1rem;
-      line-height: 137.5%;
+  
+  .card {
+    display: flex;
+      background-color: #fff;
+      border: 2px solid #aaa;
+      border-radius: 5px;
+      max-height: 300px;
+      max-width: 470px;
+      margin-bottom: 10px;
+      padding: 10px;
+      width:100%;
+      flex-direction: column;
+      
   }
-  .card__title{
-    font-size: 1.375rem;
-    line-height: 100%;
+  
 
-}
   .cards {
+    display: flex;
     background: #eee;
-  }
-.cards {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    
-  }
-
-.card {
-    border:2px solid #aaa;
-    border-radius: 5px;
-    max-width: 29.375rem;
-    max-height: 18.75rem;
-    margin-bottom: 0.625rem;
-    overflow: auto;
-    background-color: white;
-  }
-
-  .card--overflow {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-  }
-  .card--scroll{
-      overflow: scroll;
-  }
-  
- .card__flex{
-     display: flex;
-     
- }
-
- .card__image img{
-    width: 9.375rem;
-    height: auto;
-    margin: 0.2em 0.2em 0.2em 0.2em;
- }
-
-.card__list{
-    display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    list-style: none;
-    font-weight: bold;
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
+  }
+  
 
-}
-
+  .card__content {
+    display: flex;
+    flex-direction: row;
+    flex:10;
+  }
 
   
+  
+  .card__img {
+      max-width: 150px;
+  }
+
+  .card__textcontainer {
+    display: flex;
+    
+
+  }
+  .card__text {
+     overflow: auto;
+     word-break: break-word;
+     line-height: 1.375em;
+     font-size: 1em;
+     
+  }
+
+.card__listcontainer {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex: 1;
+    font-weight: bold;
+    flex-wrap: wrap;
+    flex-grow: 3;
+  }
+
+  li {
+
+    margin: 5px 5px 0 0;
+    flex-wrap: wrap;
+  }
